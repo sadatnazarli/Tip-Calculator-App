@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: #C5E4E7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    width: 100%;
+}
+
+.calculator {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-panel,
+.right-panel {
+    padding: 20px;
+}
+
+.left-panel {
+    width: 60%;
+}
+
+.right-panel {
+    width: 40%;
+    background-color: #00474B;
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2 {
+    color: #5E7A7D;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    background-color: #F3F9FA;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    text-align: right;
+    color: #00474B;
+}
+
+input[type="number"]::placeholder {
+    color: #9EBBBD;
+}
+
+.tip-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tip-btn {
+    padding: 15px;
+    background-color: #00474B;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tip-btn.active {
+    background-color: #26C2AE;
+    color: #00474B;
+}
+
+.tip-btn:hover {
+    background-color: #26C2AE;
+}
+
+#custom-tip {
+    background-color: #F3F9FA;
+    border: none;
+    font-size: 20px;
+    text-align: right;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.result h3 {
+    font-size: 14px;
+}
+
+.result p {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#reset-btn {
+    background-color: #26C2AE;
+    color: #00474B;
+    font-size: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#reset-btn:hover {
+    background-color: #9FE8DF;
+}
+
+/* Mobile Design */
+@media (max-width: 768px) {
+    .calculator {
+        flex-direction: column;
+    }
+
+    .left-panel,
+    .right-panel {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .right-panel {
+        padding: 20px;
+        border-radius: 15px;
+        justify-content: flex-start;
+    }
+
+    .result p {
+        font-size: 32px;
+    }
+
+    #reset-btn {
+        padding: 20px;
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .tip-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    input[type="number"] {
+        font-size: 18px;
+    }
+}
